@@ -7,7 +7,8 @@
  * @copyright Copyright 2024 github.com/jdavasligil
  */
 
-/** RadixNode represents a node in the radix tree. */
+
+/** RadixNode represents a node in a Radix Tree. */
 class RadixNode {
 
   /**
@@ -28,7 +29,7 @@ class RadixNode {
      * @property {Object.<string, RadixNode>} children
      * @public
      */
-    this.children = {};
+    this.children = Object.create(null);
 
     /**
      * isWord is used to check if the node is terminal.
@@ -37,12 +38,6 @@ class RadixNode {
      */
     this.isWord = isWord;
   }
-
-  /** 
-   * List of words found by the prefix search.
-   * @public
-   */
-  static searchList = [];
 
   /**
    * Find the largest common prefix between two strings.
@@ -119,6 +114,12 @@ class RadixNode {
       }
     }
   }
+
+  /** 
+   * List of words found by the prefix search.
+   * @public
+   */
+  static searchList = [];
 
   /**
    * Recursively search for the list of words matching a given prefix.
