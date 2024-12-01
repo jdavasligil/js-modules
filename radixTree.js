@@ -165,7 +165,7 @@ class RadixNode {
 
 
 /** RadixTree represents a radix tree (compressed trie). */
-export class RadixTree {
+class RadixTree {
 
   /** Creates a new RadixTree. */
   constructor() {
@@ -212,6 +212,12 @@ export class RadixTree {
     this.root.print();
   }
 }
+
+
+/* DELETE EVERYTHING BELOW FOR BROWSER COMPATABILITY */
+
+// ES6 MODULE EXPORTS
+export default PrefixTree;
 
 
 // UNIT TESTS
