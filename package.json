@@ -1,0 +1,12 @@
+{
+  "name": "js-modules",
+  "version": "1.0.0",
+  "description": "A collection of Javascript modules for personal use.",
+  "scripts": {
+    "test": "node radixTree.js"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "J. Davasligil",
+  "license": "MIT"
+}

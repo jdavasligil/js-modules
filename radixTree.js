@@ -1,7 +1,10 @@
 /**
  * @fileoverview Provides an implementation of the radix tree data structure.
  * @author J. Davasligil <jdavasligil.dev@proton.me>
- * @version 0.1.0
+ * @version 1.0.0
+ *
+ * @license MIT No Attribution
+ * @copyright Copyright 2024 github.com/jdavasligil
  */
 
 /** RadixNode represents a node in the radix tree. */
@@ -48,7 +51,7 @@ class RadixNode {
    * @returns {string}
    * @private
    */
-  static getCommonPrefix(a, b) {
+  static largestCommonPrefix(a, b) {
     let commonPrefix = '';
 
     for (let i = 0; i < Math.min(a.length, b.length); i++) {
@@ -88,7 +91,7 @@ class RadixNode {
     // The node must have an edge containing a prefix to the word by now.
     const incomingNode = this.children[wordChar];
     const prefix = incomingNode.edgeLabel;
-    const commonPrefix = RadixNode.getCommonPrefix(prefix, word);
+    const commonPrefix = RadixNode.largestCommonPrefix(prefix, word);
     const commonPrefixChar = commonPrefix[0];
     const remainingPrefix = prefix.substring(commonPrefix.length);
     const remainingWord = word.substring(commonPrefix.length);
