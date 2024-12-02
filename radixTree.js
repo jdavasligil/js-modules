@@ -216,8 +216,9 @@ class RadixTree {
 
 /* DELETE EVERYTHING BELOW FOR BROWSER COMPATABILITY */
 
+
 // ES6 MODULE EXPORTS
-export default PrefixTree;
+export default RadixTree;
 
 
 // UNIT TESTS
